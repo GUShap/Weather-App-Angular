@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UtilsService } from '../utils/utils.service';
 import { BehaviorSubject } from 'rxjs';
 import { Forecast } from 'src/app/models/forecast';
@@ -8,6 +8,14 @@ import { Forecast } from 'src/app/models/forecast';
   providedIn: 'root'
 })
 export class WeatherService {
+
+  private headers = new HttpHeaders()
+  .set('Access-Control-Allow-Origin', '*')
+  .set('Access-Control-Allow-Credentials', 'true')
+  .set('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT')
+  .set('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers')
+  .set('Authorization', 'Bearer' + ' ' + '$localStorage.token')
+
 
   private _apiKey = 'WO5Xt7Qvco7D4LI4oXMHXwbkc5gInXm4'
 
@@ -28,7 +36,6 @@ export class WeatherService {
           cityCode = res[0].Key
           this.http.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityCode}?apikey=${this._apiKey}&metric=true`)
             .subscribe((res: Object) => {
-              console.log(res);
               data = res['DailyForecasts']
               this.utils.store(location, data)
               this._forecast$.next(data)

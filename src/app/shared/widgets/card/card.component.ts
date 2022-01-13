@@ -30,9 +30,6 @@ export class CardComponent implements OnInit {
     this.nightDescription = this.forecastData.Night.IconPhrase
     this.temp.min = this.forecastData.Temperature.Minimum.Value
     this.temp.max = this.forecastData.Temperature.Maximum.Value
-
-    console.log(this.dayDescription);
-
   }
 
 }
