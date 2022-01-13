@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { WeatherService } from 'src/app/services/weather/weather.service';
 
 @Component({
@@ -10,12 +10,21 @@ export class CitySearchComponent implements OnInit {
 
   constructor(private weatherService: WeatherService) { }
 
- cityName:string
+  @Output() searchCity = new EventEmitter<string>()
+
+  cityName: string = ""
 
   ngOnInit(): void {
   }
 
-  onSetCityName(){
+  onSetCityName() {
+    setTimeout(() => {
+      this.weatherService.loadWeatherData(this.cityName)
+    }, 4000)
+  }
 
+  onSetSearch() {
+    console.log(this.cityName);
+    this.searchCity.emit(this.cityName)
   }
 }

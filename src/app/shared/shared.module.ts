@@ -10,12 +10,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
 
 import { HeaderComponent } from './cmps/header/header/header.component';
 import { FooterComponent } from './cmps/footer/footer/footer.component';
 import { SidebarComponent } from './cmps/sidebar/sidebar/sidebar.component';
 import { CardComponent } from './widgets/card/card.component';
-// import { CitySearchComponent } from './cmps/search/city-search/city-search.component';
+import { CitySearchComponent } from './cmps/search/city-search/city-search.component';
 
 
 
@@ -25,7 +27,7 @@ import { CardComponent } from './widgets/card/card.component';
     FooterComponent,
     SidebarComponent,
     CardComponent,
-    // CitySearchComponent
+    CitySearchComponent
   ],
   imports: [
     CommonModule,
@@ -37,14 +39,15 @@ import { CardComponent } from './widgets/card/card.component';
     MatMenuModule,
     MatListModule,
     RouterModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
     CardComponent,
-    // CitySearchComponent
+    CitySearchComponent
   ]
 })
 export class SharedModule { }

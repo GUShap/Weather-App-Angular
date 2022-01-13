@@ -1,3 +1,4 @@
-<section class="contact-filter" >
-    <input type="text" placeholder="Search Contact..." (ngModelChange)="onSetCityName()" >
+<section class="city" >
+    <input type="text" placeholder="Search Place..." [(ngModel)]="cityName"  (ngModelChange)="onSetCityName()" >
+    <button (click)="onSetSearch()">Search</button>
 </section>

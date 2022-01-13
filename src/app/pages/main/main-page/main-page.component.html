@@ -1,9 +1,13 @@
-<p>input</p>
 <button mat-icon-button color="accent" aria-label="Example icon-button with a heart icon">
     <mat-icon>favorite</mat-icon>
   </button>
-<div>
+  <mat-divider></mat-divider>
+  <br>
+<app-city-search (searchCity)="setSearch($event)"></app-city-search>
+  <div>
+      <br>
     <mat-divider></mat-divider>
+    <br>
 <h2>{{data.cityName|titlecase}}</h2> 
 <div fxLayout="row" fxLayoutAlign="space-between" fxLayoutGap="20px" class="stats-crads">
     <mat-card  fxFlex="25" *ngFor="let day of forecast$"> 

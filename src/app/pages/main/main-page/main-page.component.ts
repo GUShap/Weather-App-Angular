@@ -19,5 +19,10 @@ export class MainPageComponent implements OnInit {
     this.data = this.weatherService.loadWeatherData('tel-aviv')
     this.forecast$ = this.weatherService.forecast$.source['_value']
   }
+  
+  setSearch(cityName){
+    this.data=this.weatherService.loadWeatherData(cityName)
+    this.forecast$ = this.weatherService.forecast$.source['_value']
+  }
 
 }
