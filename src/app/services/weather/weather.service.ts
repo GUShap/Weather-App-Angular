@@ -31,10 +31,10 @@ export class WeatherService {
     let data = this.utils.load(location)
     if (!data) {
       var cityCode: number | string;
-      this.http.get(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${this._apiKey}&q=${location}`)
+      this.http.get(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${this._apiKey}&q=${location}`)
         .subscribe((res: object) => {
           cityCode = res[0].Key
-          this.http.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityCode}?apikey=${this._apiKey}&metric=true`)
+          this.http.get(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityCode}?apikey=${this._apiKey}&metric=true`)
             .subscribe((res: Object) => {
               data = res['DailyForecasts']
               this.utils.store(location, data)
