@@ -18,13 +18,10 @@ export class CitySearchComponent implements OnInit {
   }
 
   onSetCityName() {
-    setTimeout(() => {
-      this.weatherService.loadWeatherData(this.cityName)
-    }, 4000)
+    this.weatherService.loadWeatherData(this.cityName)
+    this.searchCity.emit(this.cityName)
+    
   }
 
-  onSetSearch() {
-    console.log(this.cityName);
-    this.searchCity.emit(this.cityName)
-  }
+  
 }
