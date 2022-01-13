@@ -1,14 +1,18 @@
 <div class="card-container">
-    <h3>{{date|date:'EEEE dd/MM/y'}}</h3>
-    <span>Day Time</span>
-    <img src="./assets/icons/{{dayIconNum}}.png">
-    <p>{{dayDescription}}</p>
+    <section class="day">
+        <h3>{{date|date:'EEEE dd/MM/y'}}</h3>
+        <span>Day Time</span>
+        <img src="./assets/icons/{{dayIconNum}}.png">
+        <p>{{dayDescription}}</p>
+    </section>
     <br>
     <mat-divider></mat-divider>
     <br>
-    <span>Night Time</span>
-    <img src="./assets/icons/{{nightIconNum}}.png">
-    <p>{{nightDescription}}</p>
+    <section class="night">
+        <span>Night Time</span>
+        <img src="./assets/icons/{{nightIconNum}}.png">
+        <p>{{nightDescription}}</p>
+    </section>
     <br>
     <br>
     <span>Temperature (C)</span>
