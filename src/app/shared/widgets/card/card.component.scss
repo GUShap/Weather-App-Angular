@@ -1,9 +1,34 @@
-.card-container{
+.card-container {
     height: 50vh;
     margin-bottom: 70px;
 
-    .day{
-        height: 200px;
+    h3 {
+        font: 17px Arial;
+        font-weight: bold;
     }
 
+    h4 {
+        font: 17px "Rockwell";
+        margin: 4px;
+        font-weight: bold;
+    }
+
+    img {
+        height: 70px;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+.description{
+
+    span{
+        color: rgb(86, 114, 29);
+    }
+    p {
+        font-weight: bold;
+    }
+}
+
+    .day {
+        height: 200px;
+    }
 }

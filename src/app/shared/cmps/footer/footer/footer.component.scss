@@ -1,5 +1,12 @@
 footer{
     padding: 20px;
-    background-color: rgba(97, 97, 253, 0.445);
+    background: url('/assets/background.svg');
+    color: rgb(129, 148, 128);
 
+    h3{
+        span{
+            font:20px 'Fira Code SemiBold';
+            padding: 10px;
+        }
+    }
 }

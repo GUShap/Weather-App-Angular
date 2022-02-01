@@ -3,6 +3,9 @@ h2{
     margin-top: -15px;
     margin-bottom: 5px;
     display: inline-block;
+    color: rgb(177, 73, 73);
+    font:24px Arial;
+    font-weight: bold;
 }
 
 button{
@@ -14,6 +17,7 @@ button{
 
 mat-icon{
     color: rgb(148, 3, 3);
+    cursor: pointer;
 }
 
 .stats-crads{

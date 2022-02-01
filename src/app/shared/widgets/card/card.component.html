@@ -1,22 +1,32 @@
 <div class="card-container">
     <section class="day">
-        <h3>{{date|date:'EEEE dd/MM/y'}}</h3>
-        <span>Day Time</span>
+        <h3>
+            {{date|date:'EEEE'}}
+            <br>
+            {{date|date:'dd/MM/y'}}
+        </h3>
         <img src="./assets/icons/{{dayIconNum}}.png">
+        <br>
+        <div class="description">
+        <span>Day Time:</span>
         <p>{{dayDescription}}</p>
+        </div>
     </section>
     <br>
     <mat-divider></mat-divider>
     <br>
     <section class="night">
-        <span>Night Time</span>
         <img src="./assets/icons/{{nightIconNum}}.png">
+        <br>
+        <div class="description">
+        <span>Night Time:</span>
         <p>{{nightDescription}}</p>
+        </div>
     </section>
     <br>
+    <span>Temperature (C):</span>
     <br>
-    <span>Temperature (C)</span>
-    <span>{{temp.min}}&#176;-{{temp.max}}&#176;</span>
+    <h4>{{temp.min}}&#176;-{{temp.max}}&#176;</h4>
 
 
 

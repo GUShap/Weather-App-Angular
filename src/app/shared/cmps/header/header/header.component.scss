@@ -1,6 +1,16 @@
 mat-toolbar{
-    background-color: rgb(97, 97, 253);
-    color: blanchedalmond;
+    background: url('/assets/background.svg');
+    color: rgb(129, 148, 128);
+
+    h1 {
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.096);
+        font-weight: bold;
+        font: 30px 'Haettenschweiler';
+        background: -webkit-linear-gradient( #5b89df,#e7dcdc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-left: 100px;
+    }  
 }
 
 button{
